@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;\
+
+class Enemy{
+
+protected:
+    int attackPower;
+public:
+    void setAttackPower(int a){
+        attackPower=a;
+    }
+
+};
+
+
+
+
+class Ninja: public Enemy {
+public:
+    void attack(){
+        cout<<"I am a ninja, ninja chop -" << attackPower<<endl;
+    }
+};
+
+class Monster: public Enemy {
+public:
+    void attack(){
+        cout<<"Monster must eat you! -" << attackPower<<endl;
+    }
+};
+
+int main()
+{
+
+    Ninja n;
+    Monster m;
+    Enemy *enemy1 = &n;
+    Enemy *enemy2 = &m;
+
+    enemy1->setAttackPower(29);
+    enemy2->setAttackPower(89);
+    n.attack();
+    m.attack();
+    return 0;
+}
+
+
+
+
+/*So say we wanted to make a computer game and
+we know that computer game we wanted to include a bunch of
+enemies like monsters and ninjas, just bunch of different
+types of enemies, well all of these enemies share the common function
+say they all had an attack function to try to attack us, however they all attacked us
+kinda different ways maybe the ninja through a sigh at us, monster tried to scare us under the bed,
+and all different enemies they had a same function they worked a little bit different well will polymorphism
+allows us to do is it allows us to call that same attack function on many different objects and since all of these
+objects like ninjas and monsters since they are all enemies this is why it is valid so since they all inherit
+from same class we can call attack on each different object even though ninja has an attack and Monster has
+an attack even we are calling the same function on different objects, they all would know what to do they all
+know that they are supposed to attack us someway, so polymorphism basically allows us to do is use the same function
+and have many different outcomes, so that is the basic idea behind polymorphism but there is actually a lot to understand,
+so lets go ahead and get to it
+*/
