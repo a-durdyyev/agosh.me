@@ -1,0 +1,84 @@
+Operatorul sizeof
+Operatorul sizeof este un operator unar care se aplică la un tip de date sau la o expresie. Rezultatul său este numărul de octeți pe care îi ocupă o dată de acel tip, respectiv rezultatul expresiei.
+
+Exemple
+
+cout << sizeof(double) << endl; // 8: o data de tip double ocupa 8 octeti
+cout << sizeof(3 + 5) << endl; // 4: 3 + 5 este de tip int; o data de tip int ocupa 4 octeti
+Alți operatori
+Limbajul C++ conține și alți operatori, dintre care:
+
+( ) – modificarea priorității unei operații, apel de funcție
+[ ] – indexarea unui tablou
+., -> – acces la membrii unei structuri
+&, * – referențiere (determinarea adresei unei variabile), dereferențiere (accesare variabilei de la o adresă)
+new, delete – alocare și dealocarea memoriei
+<<, >> – inserare și extragere din stream
+:: operatorul de acces/rezoluție
+Prioritatea operatorilor
+Prioritatea operatorilor stabilește ordinea în care se evaluează o expresie care conține mai mulți operatori, de diverse feluri – ordinea în care se efectuează operațiile.
+
+Asocierea operatorilor stabilește ordinea în care se evaluează o expresie ce conține mai mulți operatori cu aceeași prioritate. Poate fi de la stânga la dreapta sau de la dreapta la stânga.
+
+Atât prioritatea, cât și asocierea operatorilor poate fi modificată folosind paranteze rotunde ()
+
+Pentru operatorii prezentați mai sus, prioritatea este următoarea:
+
+Nivelul 1 de prioritate. Asociere: stânga dreapta
+
+operatorul de rezoluție ::
+Nivelul 2 de prioritate. Asociere: stânga dreapta
+
+postincrementarea / postdecrementare ++ --
+accesul la elementele unui tablou []
+modificarea priorității unei operații, apel de functie ()
+accesul la câmpul ueni structuri . ->
+Nivelul 3 de prioritate. Asociere: dreapta stânga
+
+preincrementarea / predecrementare ++ --
+negarea pe biți ~, negarea logică !
+operatorii aritmetici unari  + -
+referențierea / dereferențierea & *
+alocarea / dealocarea memoriei new delete
+operatorul sizeof
+operatorul de conversie explicită
+Nivelul 4 de prioritate. Asociere: stânga dreapta
+
+pointeri la membri unei structuri .* ->*
+Nivelul 5 de prioritate. Asociere: stânga dreapta
+
+operații aritmetice multiplicative * / %
+Nivelul 6 de prioritate. Asociere: stânga dreapta
+
+operații aritmetice aditive + -
+*Nivelul 7 de prioritate. Asociere: stânga dreapta
+
+deplasare pe biți <<, >>
+Nivelul 8 de prioritate. Asociere: stânga dreapta
+
+operatorii relaționali de comparare < > <= >=
+Nivelul 9 de prioritate. Asociere: stânga dreapta
+
+operatorii relaționali de egalitate / neegalitate == !=
+Nivelul 10 de prioritate. Asociere: stânga dreapta
+
+ȘI pe biți &
+Nivelul 11 de prioritate. Asociere: stânga dreapta
+
+SAU EXCLUSIV pe biți ^
+Nivelul 12 de prioritate. Asociere: stânga dreapta
+
+SAU (SAU INCLUSIV) pe biți |
+Nivelul 13 de prioritate. Asociere: stânga dreapta
+
+conjuncția logică &&
+Nivelul 14 de prioritate. Asociere: stânga dreapta
+
+disjuncția logică ||
+Nivelul 15 de prioritate. Asociere: dreapta stânga
+
+atribuirea, atribuirea compusă = += -= *= /= %= >>= <<= &= ^= |=
+operatorul condițional ?
+Nivelul 16 de prioritate. Asociere: stânga dreapta
+
+operatorul ,
