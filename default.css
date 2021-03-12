@@ -201,13 +201,14 @@ h6{ font-size: 16px;}
   text-align: center;
 }
 
-.right-column{
-  grid-area: right-column;
-  display: grid;
-  align-content: center;
-
-  padding-top: 50px;
-  padding-bottom: 50px;
+.right-column {
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    position: absolute;
+    padding-left: 400px;
 }
 
 #preview-shadow{
